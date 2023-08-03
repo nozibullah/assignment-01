@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 03</title>
+
+</head>
+
+<body>
+    <div align="center">
+        <br><br>
+        <h2>পাঁচটি দেশের নাম, যেখানে আমি উচ্চশিক্ষার জন্য যেতে চাই:</h2>
+        <select id="countrySelect" onchange="showCapital()">
+            <option value="">দেশ নির্বাচন করুন:</option>
+            <option value="a">জার্মানি</option>
+            <option value="b">ডেনমার্ক</option>
+            <option value="c">নেদারল্যান্ডস</option>
+            <option value="d">ফিনল্যান্ড</option>
+            <option value="e">ফ্রান্স</option>
+        </select>
+
+        <p id="capitalDisplay"></p>
+    </div>
+
+    <script>
+        function showCapital() {
+            const countrySelect = document.getElementById('countrySelect');
+            const capitalDisplay = document.getElementById('capitalDisplay');
+            const selectedCountry = countrySelect.value;
+
+        switch (selectedCountry) {
+            case 'a':
+                capitalDisplay.textContent = 'বার্লিন জার্মানির রাজধানী';
+            break;
+            case 'b':
+              capitalDisplay.textContent = 'কোপেনহেগেন ডেনমার্কের রাজধানী';
+            break;
+            case 'c':
+                capitalDisplay.textContent = 'আমস্টারডাম নেদারল্যান্ডসের রাজধানী';
+            break;
+            case 'd':
+                capitalDisplay.textContent = 'হেলসিঙ্কি ফিনল্যান্ডের রাজধানী';
+            break;
+            case 'e':
+                capitalDisplay.textContent = 'প্যারিস ফ্রান্সের রাজধানী';
+            break;
+            default:
+                capitalDisplay.textContent = '';
+            break;
+            }
+        }
+    </script>
+</body>
+</html>
